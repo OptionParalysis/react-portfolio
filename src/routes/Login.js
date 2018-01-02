@@ -117,12 +117,12 @@ export default class Login extends Component {
                 <form className="contact-form">
                     <div className="form-group">
                         <label htmlFor="Email">Email
-                            <input id="email" ref="email" type="email" placeholder="Email" className="form-control" />
+                            <input id="email" ref="email" type="email" autoComplete="email" placeholder="Email" className="form-control" />
                         </label>
                     </div>
                     <div className="form-group">
                         <label htmlFor="Password">Password
-                            <input id="pass" ref="password" type="password" placeholder="Password" className="form-control" />
+                            <input id="pass" ref="password" autoComplete="password" type="password" placeholder="Password" className="form-control" />
                         </label>
                     </div>
 

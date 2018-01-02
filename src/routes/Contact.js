@@ -11,6 +11,7 @@ class Contact extends Component {
                 <input
                     className="form-control"
                     id="email"
+                    autoComplete="email"
                     {...field.input}
                 />
                 </label>
