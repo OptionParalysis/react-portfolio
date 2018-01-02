@@ -113,14 +113,17 @@ export default class Login extends Component {
     render(){
         return(
             <div className="one-col-center">
+                <h1 className="page-title">Login/Register</h1>
                 <form className="contact-form">
                     <div className="form-group">
-                        <label htmlFor="Email">Email</label>
-                        <input id="email" ref="email" type="email" placeholder="Email" className="form-control" />
+                        <label htmlFor="Email">Email
+                            <input id="email" ref="email" type="email" placeholder="Email" className="form-control" />
+                        </label>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="Password">Password</label>
-                        <input id="pass" ref="password" type="password" placeholder="Password" className="form-control" />
+                        <label htmlFor="Password">Password
+                            <input id="pass" ref="password" type="password" placeholder="Password" className="form-control" />
+                        </label>
                     </div>
 
                     <p>{this.state.err}</p>

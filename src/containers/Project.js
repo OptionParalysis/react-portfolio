@@ -98,7 +98,7 @@ class Project extends Component {
         </div>
         <div className="right-column">
           <article className="content-wrap">
-            <h1>{project.name}</h1>
+            <h1 className="page-title">{project.name}</h1>
             {this.renderContent()}
             <br/>
             <Link to="/work" className="btn btn-primary">Previous Page</Link>

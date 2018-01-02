@@ -1,32 +1,31 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-// import Form from '../components/form/form';
 import './contact.css';
 
 class Contact extends Component {
 
-    // state = {
-    //     fields: {},
-    // };
+    renderUserEmail(field) {
+        return (
+            <div className="form-group">
+                <label htmlFor="email">Email
+                <input
+                    className="form-control"
+                    id="email"
+                    {...field.input}
+                />
+                </label>
+            </div>
+        );
+    }
 
-    // onChange = updatedValue => {
-    //     this.setState({ 
-    //         fields: {
-    //             ...this.state.fields,
-    //             ...updatedValue 
-    //         }
-    //     });
-    // }
-
-    render(){
-        return(
+    render() {
+        return (
             <div className="one-col-center">
-                <h1>Contact</h1>
-                {/* <Form onChange={fields => this.onChange(fields)} /> */}
+                <h1 className="page-title">Contact</h1>
                 <form action="">
                     <Field
-                        name="email"
-                        // component={}
+                        name="useremail"
+                        component={this.renderUserEmail}
                     />
                 </form>
             </div>

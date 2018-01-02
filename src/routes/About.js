@@ -18,7 +18,7 @@ const About = () => (
         </div>
         <div className="right-column">
             <div className="copy-wrap">
-                <h1 className="page-name">About</h1>
+                <h1 className="page-title">About</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sapiente, commodi rerum, hic quod aut eos quo at nesciunt laboriosam dolorem consequuntur ipsum provident ratione eum placeat rem nobis voluptatibus.</p>
                 <h4>Tool Box</h4>
             </div>
