@@ -1,0 +1,31 @@
+@import '../variables.less';
+
+@keyframes blurFadeIn{
+	0%{opacity: 0; text-shadow: 0px 0px 40px @primary; transform: scale(1.3);}
+	50%{opacity: 1; text-shadow: 0px 0px 10px @primary; transform: scale(1);}
+	100%{opacity: 1; text-shadow: 0px @primary; transform: scale(1);}
+}
+
+@keyframes blurFadeInNoShadow{
+	0%{opacity: 0; text-shadow: 0px 0px 40px @primary; transform: scale(1.3);}
+	50%{opacity: 1; text-shadow: 0px 0px 1px @primary; transform: scale(1);}
+	100%{opacity: 1; text-shadow: 0px @primary; transform: scale(1);}
+}
+
+@keyframes blurFadeInOut{
+	0%{opacity: 0; text-shadow: 0px 0px 40px @primary; transform: scale(1.3);}
+	20%,75%{opacity: 1; text-shadow: 0px 0px 1px @primary; transform: scale(1);}
+	100%{opacity: 0; text-shadow: 0px 0px 50px @white; transform: scale(0);}
+}
+
+.home {float: left; width: 100%; height: 100vh;
+	video {position: fixed; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100; transform: translateX(-50%) translateY(-50%); background-size: cover; transition: 1s opacity; opacity: .25;}
+	h2 {animation: blurFadeInOut 3s ease-in backwards; color: transparent; position: absolute; top: 33%; right: 0; left: 0; text-align: center; line-height: 1.5;}
+	.content {width: 100%; height: 100%; top: 0; left: 0; position: fixed; z-index: -10;
+		.frame-1 {animation-delay: 0s;}
+		.frame-2 {animation-delay: 3s;}
+		.frame-3 {animation-delay: 6s;}
+		.frame-4 {animation-delay: 9s;}
+		.frame-5 {animation-delay: 12s; animation: blurFadeInNoShadow 3s ease-in 12s backwards; color: @primary;}
+	}
+}

@@ -1,0 +1,27 @@
+@primary: #22264b;
+@secondary: #b56969;
+@third: #e6cf8b;
+
+@black: #000;
+@white: #e8edf3;
+@light-grey: #ccc;
+@dark-grey: #666;
+
+@primary-font: 'Oswald', sans-serif;
+@secondary-font: 'Old Standard TT', serif;
+
+@px-lg: 1180px;
+@px-md: 1024px;
+@px-sm: 768px;
+@px-xs: 480px;
+
+@xs-portrait: ~"only screen and (max-width: " (@px-xs - 1) ~")";
+@xs: ~"only screen and (max-width: " (@px-sm - 1) ~")";
+@sm: ~"only screen and (min-width: @{px-sm}) and (max-width: " (@px-md - 1) ~")";
+@md: ~"only screen and (min-width: @{px-md}) and (max-width: " (@px-lg - 1) ~")";
+@lg: ~"only screen and (min-width: @{px-lg})";
+@below-sm: ~"only screen and (max-width: " (@px-sm - 1) ~")";
+@below-md: ~"only screen and (max-width: " (@px-md - 1) ~")";
+@below-lg: ~"only screen and (max-width: " (@px-lg - 1) ~")";
+@retina: ~"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+@between-sm-lg: ~"only screen and (min-width: @{px-md}) and (max-width: 1300px)";
