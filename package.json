@@ -5,6 +5,8 @@
   "dependencies": {
     "axios": "^0.17.1",
     "devicons": "^1.8.0",
+    "eslint": "^4.14.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "firebase": "^4.5.2",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
