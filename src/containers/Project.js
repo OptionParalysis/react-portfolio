@@ -43,12 +43,13 @@ class Project extends Component {
       if (project.type === "image") {
         image = (
           <picture key={project.id}>
-            <img 
-              alt={project.name} 
-              srcSet={project.sizes.original} 
-              onClick={this.openModal.bind(this, project)}
-              className="image" 
-            />
+            <button className="modal-button" onClick={this.openModal.bind(this, project)}>
+              <img 
+                alt={project.name} 
+                srcSet={project.sizes.original} 
+                className="image" 
+              />
+            </button>
           </picture>
         );
       }

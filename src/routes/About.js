@@ -60,9 +60,9 @@ const About = () => (
                 </figure>
             </div>
             <div className="chart-wrap">
-                <figure className="chart angular">
+                <figure className="chart react">
                 <figcaption>Angular</figcaption>
-                <div className="devicons devicons-angular icon"></div>
+                <div className="devicons devicons-react icon"></div>
                 <svg width="100" height="100">
                     <circle className="outer" cx="50" cy="50" r="35" transform="rotate(-90, 50, 50)"/>
                 </svg>
