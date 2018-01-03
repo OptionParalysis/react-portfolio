@@ -5,8 +5,10 @@ import './contact.css';
 class Contact extends Component {
 
     renderField(field) {
+        const className = `form-group ${field.meta.touched && field.meta.error ? 'has-error text-danger' : ''}`;
+
         return (
-            <div className="form-group">
+            <div className={className}>
                 <label htmlFor={field.label}>{field.label}
                     <input
                         className="form-control"
@@ -15,14 +17,16 @@ class Contact extends Component {
                         {...field.input}
                     />
                 </label>
-                {field.meta.touched ? <p className="bg-danger">{field.meta.error}</p> : ''}
+                {field.meta.touched ? field.meta.error : ''}
             </div>
         );
     }
 
     renderTextArea(field) {
+        const className = `form-group ${field.meta.touched && field.meta.error ? 'has-error text-danger' : ''}`;
+
         return (
-            <div className="form-group">
+            <div className={className}>
                 <label htmlFor={field.label}>{field.label}
                     <textarea
                         className="form-control"
@@ -31,13 +35,13 @@ class Contact extends Component {
                         {...field.input}
                     />
                 </label>
-                {field.meta.touched ? <p className="bg-danger">{field.meta.error}</p> : ''}
+                {field.meta.touched ? field.meta.error : ''}
             </div>
         );
     }
 
     onSubmit(values) {
-        console.log(values);
+        
     }
 
     render() {

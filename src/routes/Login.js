@@ -10,7 +10,6 @@ var config = {
     storageBucket: "personal-portfolio-bee65.appspot.com",
     messagingSenderId: "157302723960"
 };
-firebase.initializeApp(config);
 
 export default class Login extends Component {
     
