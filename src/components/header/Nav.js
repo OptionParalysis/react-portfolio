@@ -22,32 +22,28 @@ export default class Nav extends Component {
                                 <NavLink 
                                     to="/" 
                                     exact 
-                                    activeClassName="selected" 
-                                    tabIndex="-1"
+                                    activeClassName="selected"
                                     onClick={this.menuClick}>Home</NavLink>
                             </li>
                             <li>
                                 <NavLink 
                                     to="/about" 
                                     exact 
-                                    activeClassName="selected" 
-                                    tabIndex="-1"
+                                    activeClassName="selected"
                                     onClick={this.menuClick}>About</NavLink>
                             </li>
                             <li>
                                 <NavLink 
                                     to="/work" 
                                     exact 
-                                    activeClassName="selected" 
-                                    tabIndex="-1"
+                                    activeClassName="selected"
                                     onClick={this.menuClick}>Work</NavLink>
                             </li>
                             <li>
                                 <NavLink 
                                     to="/contact" 
                                     exact 
-                                    activeClassName="selected" 
-                                    tabIndex="-1"
+                                    activeClassName="selected"
                                     onClick={this.menuClick}>Contact</NavLink>
                             </li>
                         </ul>
