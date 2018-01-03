@@ -2,7 +2,7 @@ import axios from 'axios';
 var firebase = require('firebase');
 
 // firebase
-var config = {
+var fireBaseConfig = {
     // Initialize Firebase
     apiKey: "AIzaSyA84ZXTyP61cMiYeejgjTdqFenaHtAOy1U",
     authDomain: "personal-portfolio-bee65.firebaseapp.com",
@@ -11,7 +11,12 @@ var config = {
     storageBucket: "personal-portfolio-bee65.appspot.com",
     messagingSenderId: "157302723960"
 };
-firebase.initializeApp(config);
+firebase.initializeApp(fireBaseConfig);
+
+// sendgrid (for email)
+var sendGridConfig = {
+  apiKey: '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'
+}
 
 // behance
 const USER_ID = 'zachjanice';
