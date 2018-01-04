@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 
 var firebase = require('firebase');
-var config = {
-    // Initialize Firebase
-    apiKey: "AIzaSyA84ZXTyP61cMiYeejgjTdqFenaHtAOy1U",
-    authDomain: "personal-portfolio-bee65.firebaseapp.com",
-    databaseURL: "https://personal-portfolio-bee65.firebaseio.com",
-    projectId: "personal-portfolio-bee65",
-    storageBucket: "personal-portfolio-bee65.appspot.com",
-    messagingSenderId: "157302723960"
-};
 
 export default class Login extends Component {
     
@@ -89,6 +80,17 @@ export default class Login extends Component {
                 email: user.email,
                 name: user.displayName
             });
+
+            var lout = document.getElementById('logout');
+            var lin = document.getElementById('login');
+            var google = document.getElementById('google');
+            var signup = document.getElementById('signup');
+
+            lout.classList.remove('hidden');
+            lin.classList.add('hidden');
+            google.classList.add('hidden');
+            signup.classList.add('hidden');
+            
         })
         .catch(e => {
             var msg = e.message;

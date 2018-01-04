@@ -3,6 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import './contact.css';
 
 class Contact extends Component {
+    endpoint = 'https://your-project.cloudfunctions.net/httpEmail';
 
     renderField(field) {
         const className = `form-group ${field.meta.touched && field.meta.error ? 'has-error text-danger' : ''}`;
@@ -41,7 +42,7 @@ class Contact extends Component {
     }
 
     onSubmit(values) {
-        
+        console.log(values);
     }
 
     render() {
@@ -53,17 +54,17 @@ class Contact extends Component {
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     <Field
                         name="email"
-                        label="Email"
+                        label="Your Email:"
                         component={this.renderField}
                     />
                     <Field
                         name="subject"
-                        label="Subject"
+                        label="Subject:"
                         component={this.renderField}
                     />
                     <Field
                         name="body"
-                        label="Body"
+                        label="Body:"
                         component={this.renderTextArea}
                     />
                     <button
@@ -77,20 +78,16 @@ class Contact extends Component {
 
 function validate(values) {
     const errors = {};
-
     // validate the inputs from 'values'
     if(!values.email) {
         errors.email = 'Enter a valid email address.'
     }
-
     if(!values.subject) {
         errors.subject = 'Enter a title for the email.'
     }
-
     if(!values.body) {
         errors.body = 'Enter a message for the email.'
     }
-
     return errors;
 }
 

@@ -4,12 +4,12 @@ var firebase = require('firebase');
 // firebase
 var fireBaseConfig = {
     // Initialize Firebase
-    apiKey: "AIzaSyA84ZXTyP61cMiYeejgjTdqFenaHtAOy1U",
-    authDomain: "personal-portfolio-bee65.firebaseapp.com",
-    databaseURL: "https://personal-portfolio-bee65.firebaseio.com",
-    projectId: "personal-portfolio-bee65",
-    storageBucket: "personal-portfolio-bee65.appspot.com",
-    messagingSenderId: "157302723960"
+    apiKey: "AIzaSyCfhez8P7Xee5jLOO5qXrLldMjOMk0m2zY",
+    authDomain: "portfolio-c7da3.firebaseapp.com",
+    databaseURL: "https://portfolio-c7da3.firebaseio.com",
+    projectId: "portfolio-c7da3",
+    storageBucket: "portfolio-c7da3.appspot.com",
+    messagingSenderId: "753227933187"
 };
 firebase.initializeApp(fireBaseConfig);
 

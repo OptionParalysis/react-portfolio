@@ -1,11 +1,5 @@
 const functions = require('firebase-functions');
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
 const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 
@@ -24,8 +18,8 @@ exports.firestoreEmail = functions.firestore
         const user = doc.data()
         const msg = {
           to: user.email,
-          from: 'hello@angularfirebase.com',
-          subject: 'New Follower',
+          from: 'Zach Janice',
+          subject: 'Thanks for reaching out.',
           // text: `Hey ${toName}. You have a new follower!!! `,
           // html: `<strong>Hey ${toName}. You have a new follower!!!</strong>`,
 
