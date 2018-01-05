@@ -10,7 +10,7 @@ import {
     Switch
 } from 'react-router-dom';
 
-// redux stuff
+// redux
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import promise from 'redux-promise';

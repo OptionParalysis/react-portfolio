@@ -1,5 +1,5 @@
 import axios from 'axios';
-var firebase = require('firebase');
+const firebase = require('firebase');
 
 // firebase
 var fireBaseConfig = {
@@ -14,9 +14,9 @@ var fireBaseConfig = {
 firebase.initializeApp(fireBaseConfig);
 
 // sendgrid (for email)
-var sendGridConfig = {
-  apiKey: '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'
-}
+// var sendGridConfig = {
+//   apiKey: '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'
+// }
 
 // behance
 const USER_ID = 'zachjanice';

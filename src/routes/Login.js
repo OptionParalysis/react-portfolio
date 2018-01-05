@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-var firebase = require('firebase');
+import firebase from 'firebase';
 
 export default class Login extends Component {
     
