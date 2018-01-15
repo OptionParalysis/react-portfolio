@@ -11,7 +11,7 @@
 /build
 
 # hide api keys
-/actions/index.js
+config.js
 
 # misc
 .DS_Store

@@ -1,22 +1,5 @@
 import axios from 'axios';
-const firebase = require('firebase');
-
-// firebase
-var fireBaseConfig = {
-    // Initialize Firebase
-    apiKey: "AIzaSyCfhez8P7Xee5jLOO5qXrLldMjOMk0m2zY",
-    authDomain: "portfolio-c7da3.firebaseapp.com",
-    databaseURL: "https://portfolio-c7da3.firebaseio.com",
-    projectId: "portfolio-c7da3",
-    storageBucket: "portfolio-c7da3.appspot.com",
-    messagingSenderId: "753227933187"
-};
-firebase.initializeApp(fireBaseConfig);
-
-// sendgrid (for email)
-// var sendGridConfig = {
-//   apiKey: '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'
-// }
+import '../config';
 
 // behance
 const USER_ID = 'zachjanice';
