@@ -68,12 +68,18 @@ header {position: fixed; top: 0; width: 100%; background: @secondary; height: 6r
     ul {margin: 0; padding: 0; list-style: none;
       li {display: inline-block; padding-right: 1.5rem;
         a {color: @white; text-decoration: none;
-            &:before {content: '\f007'; font-family: 'FontAwesome'; margin-right: 1rem; background: @white; color: @secondary; border-radius: 50%; padding: .5rem .75rem;}
+          &:before {content: '\f007'; font-family: 'FontAwesome'; margin-right: 1rem; background: @white; color: @secondary; border-radius: 50%; padding: .5rem .75rem;}
         }
         &:hover {
-            a {color: @primary; text-decoration: none;
-              &:before {background: @primary;}
-            }
+          a {color: @primary; text-decoration: none;
+            &:before {background: @primary;}
+          }
+          button {color: @primary; text-decoration: none;
+            &:before {background: @primary;}
+          }
+        }
+        button {outline: 0; border: none; color: @white; text-decoration: none; background: transparent;
+          &:before {content: '\f007'; font-family: 'FontAwesome'; margin-right: 1rem; background: @white; color: @secondary; border-radius: 50%; padding: .5rem .75rem;}
         }
       }
     }

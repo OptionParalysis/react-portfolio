@@ -1,5 +1,4 @@
 import axios from 'axios';
-import '../config';
 
 // behance
 const USER_ID = 'zachjanice';
