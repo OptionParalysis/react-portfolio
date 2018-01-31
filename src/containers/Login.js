@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import firebase from 'firebase';
 import InputField from "../components/form/inputField";
 import LoginButtons from "../components/elements/LoginButtons";
 import { login, getUser, googleLogin } from "../actions/UserActions";
