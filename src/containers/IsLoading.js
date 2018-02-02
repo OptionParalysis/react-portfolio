@@ -14,18 +14,19 @@ class IsLoading extends Component {
     }
   }
 
-  render(){
+  render() {
     const { userLoading, children } = this.props;
-    if ((!userLoading) || (this.props.user === null)) {
-      return(
+    if((!userLoading) || (this.props.user === null)) {
+      return (
         <div>
           {children}
         </div>
-      );
-    } else {
+      )
+    }
+    else {
       return (
         <Loading />
-      );
+      )
     }
   }
 }

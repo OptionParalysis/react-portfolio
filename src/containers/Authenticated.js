@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import * as React from 'react';
 
 class Authenticated extends Component {
   componentDidUpdate() {
@@ -13,14 +12,14 @@ class Authenticated extends Component {
 
   render() {
     const { user, children, userLoading } = this.props;
-    return (userLoading === false && user) ? <div>{children}</div>: null
+    return (userLoading === false && user) ? children : null;
   }
 }
 
 function mapStateToProps(state) {
   return { 
     user: state.user, 
-    userLoading: state.loading.user 
+    userLoading: state.loading.user
   };
 }
 

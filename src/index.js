@@ -39,7 +39,7 @@ const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Router>
-      {/* <IsLoading> */}
+      <IsLoading>
         <div className="site-wrapper">
           <Header />
             <main>
@@ -59,7 +59,7 @@ ReactDOM.render(
             </main>
           <Footer />
         </div>
-      {/* </IsLoading> */}
+      </IsLoading>
     </Router>
   </Provider>,
   document.getElementById("root")
