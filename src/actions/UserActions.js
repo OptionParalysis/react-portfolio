@@ -1,4 +1,4 @@
-import { auth, database, storage, googleProvider, facebookProvider } from '../Firebase';
+import { auth, database, googleProvider } from '../Firebase';
 
 export const GET_USER = 'GET_USER';
 export const GET_DB_USERS = 'get_db_users';
@@ -55,21 +55,6 @@ export function googleLogin() {
   return dispatch => auth.signInWithRedirect(googleProvider);
 }
 
-export function facebookLogin() {
-  return dispatch => auth.signInWithRedirect(facebookProvider);
-}
-
-export function createAccount(data, picture) {
-  const { fname, lname, email, password, image } = data;
-  return dispatch => auth.createUserWithEmailAndPassword(email, password).then((user) => {
-    if (user !== null) {
-      storage.child(`profile/${picture.name}/${new Date().getTime()}`).put(image[0]).then((snapshot) => {
-        database.ref('users').child(user.uid).set({
-          fname,
-          lname,
-          picture: snapshot.metadata.downloadURLs[0]
-        });
-      });
-    }
-  });
+export function createAccount(email, password) {
+  return dispatch => auth.createUserWithEmailAndPassword(email, password);
 }

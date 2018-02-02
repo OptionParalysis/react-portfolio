@@ -1,26 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { getUser, getDbUsers } from '../actions/UserActions';
+import { getUser } from '../actions/UserActions';
 import Loading from '../components/Loading';
 
 class IsLoading extends Component {
 
   componentWillMount() {
-    const { userLoading, dbUserLoading } = this.props;
+    const { userLoading } = this.props;
 
     if(userLoading === undefined) {
       this.props.getUser();
     }
-
-    if(dbUserLoading === undefined) {
-      this.props.getDbUsers();
-    }
   }
 
   render(){
-    const { userLoading, dbUserLoading, children } = this.props;
-    if (userLoading === false && dbUserLoading === false) {
+    const { userLoading, children } = this.props;
+    if ((!userLoading) || (this.props.user === null)) {
       return(
         <div>
           {children}
@@ -37,9 +33,8 @@ class IsLoading extends Component {
 function mapStateToProps(state) {
   return {
     userLoading: state.loading.user,
-    dbUserLoading: state.loading.dbUser,
     user: state.user
   };
 }
 
-export default withRouter(connect(mapStateToProps, { getUser, getDbUsers })(IsLoading));
+export default withRouter(connect(mapStateToProps, { getUser })(IsLoading));

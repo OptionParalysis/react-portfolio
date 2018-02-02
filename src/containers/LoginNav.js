@@ -1,14 +1,26 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
-import { getUser, logout } from '../../actions/UserActions';
+import { getUser, logout } from '../actions/UserActions';
+import './loginNav.css';
 
 class LoginNav extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      authenticated: false
-    };
+  
+  componentWillMount() {
+    this.props.getUser();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const lout = document.getElementById('logout-link');
+    const lin = document.getElementById('login-link');
+
+    if (nextProps.user.email !== undefined || this.props.user.email !== undefined) {
+      lin.style.display = 'none';
+      lout.style.display = 'block';
+    } else {
+      lout.style.display = 'none';
+      lin.style.display = 'block';
+    }
   }
 
   render() {
@@ -21,7 +33,7 @@ class LoginNav extends Component {
                 Logout
               </button>
 
-              <Link id="logout-link" to="/login">
+              <Link id="login-link" to="/login">
                 Register/Login
               </Link>
 

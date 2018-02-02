@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Nav from './Nav';
-import LoginNav from './LoginNav';
+import LoginNav from '../../containers/LoginNav';
 import './header.css';
 
 export default class Header extends Component {

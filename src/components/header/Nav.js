@@ -20,7 +20,7 @@ export default class Nav extends Component {
                         <ul role="navigation">
                             <li>
                                 <NavLink 
-                                    to="/" 
+                                    to="/home" 
                                     exact 
                                     activeClassName="selected"
                                     onClick={this.menuClick}>Home</NavLink>
