@@ -6,35 +6,52 @@ import './loginNav.css';
 
 class LoginNav extends Component {
   
-  componentWillMount() {
-    this.props.getUser();
+  constructor(props){
+    super(props);
+    this.state = {
+      auth: false
+    };
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   const lout = document.getElementById('logout-link');
-  //   const lin = document.getElementById('login-link');
+  componentWillMount() {
+    if(this.props.user !== null) {
+      this.setState ({
+        auth: true
+      });
+    }
+  }
 
-  //   if (nextProps.user.email !== undefined || this.props.user.email !== undefined) {
-  //     lin.style.display = 'none';
-  //     lout.style.display = 'block';
-  //   } else {
-  //     lout.style.display = 'none';
-  //     lin.style.display = 'block';
-  //   }
-  // }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.user !== null) {
+      this.setState ({
+        auth: true
+      });
+    }
+  }
 
   render() {
+    let lin;
+    let lout;
+
+    if(this.state.auth === true) {
+      lin = '';
+      lout = 
+        <button id="logout-link" onClick={() => {this.props.logout()}}>
+          Logout
+        </button>;
+    } else {
+      lin = 
+        <Link id="login-link" to="/login">
+          Register/Login
+        </Link>;
+      lout = '';
+    }
     return (
       <nav className="login-links">
         <ul>
           <li>
-            <button id="logout-link" onClick={() => {this.props.logout()}}>
-              Logout
-            </button>
-
-            <Link id="login-link" to="/login">
-              Register/Login
-            </Link>
+            {lin}
+            {lout}
           </li>
         </ul>
       </nav>

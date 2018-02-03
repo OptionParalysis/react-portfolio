@@ -22,9 +22,14 @@ class Login extends Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.user !== null) {
+      nextProps.history.push('/');
+    }
+  }
+
   submitLogin(event) {
     event.preventDefault();
-    console.log('submit')
     this.props.login(this.state.email, this.state.password).catch(err => {
       this.setState({
         error: err
