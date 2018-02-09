@@ -7,7 +7,7 @@ const SocialLoginBtns = (props) => {
   return (
     <div className="justify-content-between">
       <button 
-        className="btn btn-social btn-google" 
+        className="btn btn-social btn-primary" 
         onClick={googleLogin}>
         <span className="fa fa-google"></span>
         Sign in with Google
