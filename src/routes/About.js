@@ -1,14 +1,14 @@
 import React from 'react';
 
 import './about.css';
-import '../images/portrait.jpg'
+import img from '../images/portrait.jpg'
 
 const About = () => (
 
     <div className="about left-column-wrap">
         <div className="left-column">
             <div className="portrait-wrap">
-                <img src="../images/portrait.jpg" alt="Portrait of Z" />
+                <img src={img} alt="Portrait of Z" />
                 <ul>
                     <li>Zach Janice</li>
                     <li>Front End Developer</li>
