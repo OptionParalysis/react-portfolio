@@ -2,7 +2,7 @@
   "name": "react-tool",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://optionparalysis.github.io/react-portfolio",
+  "homepage": "./",
   "dependencies": {
     "axios": "^0.17.1",
     "devicons": "^1.8.0",

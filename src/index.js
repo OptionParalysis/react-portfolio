@@ -34,6 +34,9 @@ import Authenticated from './containers/Authenticated';
 // loading
 import IsLoading from './containers/IsLoading';
 
+// service worker
+import registerServiceWorker from './registerServiceWorker';
+
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
 ReactDOM.render(
@@ -63,4 +66,4 @@ ReactDOM.render(
     </HashRouter>
   </Provider>,
   document.getElementById("root")
-);
+);registerServiceWorker();
