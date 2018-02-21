@@ -4,7 +4,7 @@ import "../node_modules/font-awesome/css/font-awesome.css";
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, HashRouter, Route, Switch } from 'react-router-dom';
 
 // redux
 import { Provider } from 'react-redux';
@@ -38,7 +38,7 @@ const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <Router>
+    <HashRouter>
       <IsLoading>
         <div className="site-wrapper">
           <Header />
@@ -60,7 +60,7 @@ ReactDOM.render(
           <Footer />
         </div>
       </IsLoading>
-    </Router>
+    </HashRouter>
   </Provider>,
   document.getElementById("root")
 );

@@ -2,6 +2,7 @@
   "name": "react-tool",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://optionparalysis.github.io/react-portfolio",
   "dependencies": {
     "axios": "^0.17.1",
     "devicons": "^1.8.0",
@@ -9,6 +10,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "firebase": "^4.5.2",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^1.1.0",
     "lodash": "^4.17.4",
     "npm-run-all": "^4.1.1",
     "react": "^15.6.1",
@@ -26,6 +28,8 @@
   "scripts": {
     "build-css": "node-less-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-less-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
