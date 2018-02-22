@@ -4,6 +4,7 @@ import { fetchProjects } from '../actions';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
 import Loading from '../components/Loading';
+import isLoading from './IsLoading';
 
 import "./projects.css";
 

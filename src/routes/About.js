@@ -19,7 +19,11 @@ const About = () => (
         <div className="right-column">
             <div className="copy-wrap">
                 <h1 className="page-title">About</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sapiente, commodi rerum, hic quod aut eos quo at nesciunt laboriosam dolorem consequuntur ipsum provident ratione eum placeat rem nobis voluptatibus.</p>
+                <p>Hello, my name is Zach Janice and I’m a Front-End Developer based in Kansas City.</p>
+                <p>I believe in craftsmanship, attention to detail, and the sweet spot between concept and execution. The work I create is driven by insight, strategy and purpose.</p>
+                <p>I create websites with an emphasis on client-side technologies and Web Accessibility standards, using HTML5, jQuery/JavaScript, and CSS3, while utilizing pre-processors like Less. I can use design tools such as Photoshop, Sketch App, Illustrator, and InDesign to create pixel perfect sites, and I am experienced in creating and coding email campaigns that are responsive and render correctly in popular desktop and mobile clients.</p>
+                <p>Using NPM and Grunt, I created a build system that helps speed up my team’s development and create products for our sales team. I also train and develop new team members, while informing and coaching internal stakeholders and clients about best practices and processes.</p>
+                <p>I'm currently expanding my tool belt with React.js and Redux with Firebase.io.</p>
                 <h2>Tool Box</h2>
             </div>
 
