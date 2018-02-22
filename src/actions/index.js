@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // behance
 const USER_ID = 'zachjanice';
-const API_KEY = '?api_key=RgTb08jfwNBXwedEJsd0rOrLGU3FiLhx';
+const API_KEY = '?api_key=3uFNmciSUWV7Cc1j366WsDxh7jg8q97H';
 const PROJECTS_URL = 'https://api.behance.net/v2/users/';
 const PROJECT_URL = 'https://www.behance.net/v2/projects/';
 
