@@ -4,7 +4,7 @@ import "../node_modules/font-awesome/css/font-awesome.css";
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 // redux
 import { Provider } from 'react-redux';

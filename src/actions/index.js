@@ -8,26 +8,66 @@ const PROJECT_URL = 'https://www.behance.net/v2/projects/';
 
 export const FETCH_PROJECTS = 'fetch_projects';
 export const FETCH_PROJECT = 'fetch_project';
+export const FETCH_PROJECTS_ERR = 'fetch_projects_err';
+export const FETCH_PROJECT_ERR = 'fetch_project_err';
+
 export const CREATE_CONTACT = 'create_contact';
+
+function fetchProjectsSuccess(response) {
+  return {
+    type: FETCH_PROJECTS,
+    payload: response
+  }
+}
+
+function fectchProjectsErr(err) {
+  return {
+    type: FETCH_PROJECTS_ERR,
+    payload: err
+  }
+}
 
 export function fetchProjects() {
   const url = `${PROJECTS_URL}${USER_ID}/projects${API_KEY}`;
-  const request = axios.get(url);
-  
+
+  return function(dispatch) {
+    axios.get(url)
+      .then((response) => {
+        dispatch(fetchProjectsSuccess(response))
+      })
+      .catch((err) => {
+        dispatch(fectchProjectsErr(err))
+      })
+  }
+}
+
+function fetchProjectSuccess(response) {
   return {
-    type: FETCH_PROJECTS,
-    payload: request
-  };
+    type: FETCH_PROJECT,
+    payload: response
+  }
+}
+
+function fectchProjectErr(err) {
+  console.log(err)
+  return {
+    type: FETCH_PROJECT_ERR,
+    payload: err
+  }
 }
 
 export function fetchProject(id) {
   const url = `${PROJECT_URL}${id}${API_KEY}`;
-  const request = axios.get(url);
   
-  return {
-    type: FETCH_PROJECT,
-    payload: request
-  };
+  return function(dispatch) {
+    axios.get(url)
+      .then((response) => {
+        dispatch(fetchProjectSuccess(response))
+      })
+      .catch((err) => {
+        dispatch(fectchProjectErr(err))
+      })
+  }
 }
 
 export function createContact(value) {
