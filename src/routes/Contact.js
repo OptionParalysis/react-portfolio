@@ -54,17 +54,17 @@ class Contact extends Component {
         <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
           <Field
             name="email"
-            label="Your Email:"
+            label="Your Email"
             component={this.renderField}
           />
           <Field
             name="subject"
-            label="Subject:"
+            label="Title"
             component={this.renderField}
           />
           <Field
             name="body"
-            label="Body:"
+            label="Message"
             component={this.renderTextArea}
           />
           <button
