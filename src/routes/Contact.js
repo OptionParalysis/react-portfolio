@@ -93,5 +93,5 @@ function validate(values) {
 
 export default reduxForm({
     validate,
-    form: 'ConactForm'
+    form: 'ContactForm'
 })(Contact);

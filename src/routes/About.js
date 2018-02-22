@@ -24,7 +24,7 @@ const About = () => (
                 <p>I create websites with an emphasis on client-side technologies and Web Accessibility standards, using HTML5, jQuery/JavaScript, and CSS3, while utilizing pre-processors like Less. I can use design tools such as Photoshop, Sketch App, Illustrator, and InDesign to create pixel perfect sites, and I am experienced in creating and coding email campaigns that are responsive and render correctly in popular desktop and mobile clients.</p>
                 <p>Using NPM and Grunt, I created a build system that helps speed up my team’s development and create products for our sales team. I also train and develop new team members, while informing and coaching internal stakeholders and clients about best practices and processes.</p>
                 <p>I'm currently expanding my tool belt with React.js and Redux with Firebase.io.</p>
-                <p>You can very my resume on <a href="http://www.linkedin.com/in/zach-janice-06121266" target="_blank">Linkedin</a>.</p>
+                <p>You can very my resume on <a href="http://www.linkedin.com/in/zach-janice-06121266" target="_blank" rel="noopener noreferrer">Linkedin</a>.</p>
                 <h2>Tool Box</h2>
             </div>
 
