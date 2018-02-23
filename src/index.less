@@ -4,6 +4,11 @@ body {background: @white;}
 
 h1, h2, h3, h4, h5, h6 {color: @primary; font-family: @primary-font;}
 
+a {color: @link-color;
+		&:hover {color: @link-color;}
+		&:focus {color: @link-color;}
+}
+
 .btn {display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px; transition: all .5s;
 }
 .btn-primary {color: @white; background-color: @primary; border-color: darken(@primary, 20%);
