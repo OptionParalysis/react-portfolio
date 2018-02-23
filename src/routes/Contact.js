@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { database } from '../Firebase';
 import './contact.css';
 
 class Contact extends Component {
-  endpoint = 'https://your-project.cloudfunctions.net/httpEmail';
+
+  constructor(props){
+    super(props);
+    this.state = {
+      formSubmited: false
+    };
+  }
 
   renderField(field) {
     const className = `form-group ${field.meta.touched && field.meta.error ? 'has-error text-danger' : ''}`;
@@ -14,7 +21,7 @@ class Contact extends Component {
           <input
             className="form-control"
             id={field.label}
-            autoComplete={field.label}
+            autoComplete={field.type}
             {...field.input}
           />
         </label>
@@ -32,7 +39,7 @@ class Contact extends Component {
           <textarea
             className="form-control"
             id={field.label}
-            autoComplete={field.label}
+            autoComplete={field.type}
             {...field.input}
           />
         </label>
@@ -42,7 +49,10 @@ class Contact extends Component {
   }
 
   onSubmit(values) {
-    console.log(values);
+    database.ref('messages').push(values);
+    this.setState({
+      formSubmited: true
+    });
   }
 
   render() {
@@ -55,16 +65,19 @@ class Contact extends Component {
           <Field
             name="email"
             label="Your Email"
+            type="email"
             component={this.renderField}
           />
           <Field
             name="subject"
-            label="Title"
+            label="Subject"
+            type="none"
             component={this.renderField}
           />
           <Field
             name="body"
             label="Message"
+            type="none"
             component={this.renderTextArea}
           />
           <button
