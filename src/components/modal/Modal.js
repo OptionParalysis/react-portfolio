@@ -11,7 +11,7 @@ class Modal extends Component {
 
     return (
       <div className="backdrop">
-        <div className="pop-modal">
+        <div className="pop-modal" aria-hidden="false" aria-labelledby={this.props.labelBy} role="dialog">
           {this.props.children}
           <div className="footer">
             <button onClick={this.props.onClose} className="btn btn-primary">

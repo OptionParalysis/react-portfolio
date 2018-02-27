@@ -86,7 +86,8 @@ class Project extends Component {
             {this.renderImg()}
             <Modal 
               show={this.state.currentModal}
-              onClose={this.closeModal}>
+              onClose={this.closeModal}
+              labelBy={project.name}>
               <picture>
                 <img 
                   alt={project.name} 
@@ -98,7 +99,7 @@ class Project extends Component {
         </div>
         <div className="right-column">
           <article className="content-wrap">
-            <h1 className="page-title">{project.name}</h1>
+            <h1 id={'#' + project.name} className="page-title">{project.name}</h1>
             {this.renderContent()}
             <br/>
             <Link to="/work" className="btn btn-primary">Previous Page</Link>
