@@ -61,7 +61,10 @@ class Contact extends Component {
     return (
       <div className="one-col-center">
         <h1 className="page-title">Contact</h1>
-        <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+        <form onSubmit={handleSubmit(this.onSubmit.bind(this))}
+           action="https://formspree.io/zachjanice57@gmail.com"
+           method="POST"
+        >
           <Field
             name="email"
             label="Your Email"
