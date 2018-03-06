@@ -49,10 +49,10 @@ class Contact extends Component {
   }
 
   onSubmit(values) {
-    database.ref('messages').push(values);
-    this.setState({
-      formSubmited: true
-    });
+    // database.ref('messages').push(values);
+    // this.setState({
+    //   formSubmited: true
+    // });
   }
 
   render() {
@@ -61,15 +61,19 @@ class Contact extends Component {
     return (
       <div className="one-col-center">
         <h1 className="page-title">Contact</h1>
-        <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+        <form 
+          // onSubmit={handleSubmit(this.onSubmit.bind(this))} 
+          action="https://formspree.io/zachjanice57@gmail.com"
+          method="POST"
+        >
           <Field
-            name="email"
+            name="_replyto"
             label="Your Email"
             type="email"
             component={this.renderField}
           />
           <Field
-            name="subject"
+            name="_subject"
             label="Subject"
             type="none"
             component={this.renderField}
