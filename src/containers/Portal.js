@@ -7,7 +7,7 @@ class Portal extends Component {
   render(){
     return(
       <div>
-        Portal
+        Shortly I will be displaying independent projects I've been working on.  Stay tuned!
       </div>
     );
   }
